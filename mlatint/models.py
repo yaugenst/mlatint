@@ -17,7 +17,6 @@ class VAE:
         device: str = "cpu",
     ):
         model_fp = _data_dir.joinpath(f"vae2d_{model}.ckpt")
-        print(model_fp)
         self.model = VAE2d.load_from_checkpoint(model_fp, map_location=device)
         self.model.freeze()
         self.model.eval()
