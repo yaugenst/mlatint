@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlatint"
+authors = [{ name = "Yannick Augenstein" }]
+description = "ML@INT workshop 23.04.2024"
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dynamic = ["version"]
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "jupyterlab",
+    "bokeh",
+    "jupyter_bokeh",
+    "lightning",
+    "einops",
+    "pycairo",
+]
+
+[project.urls]
+Source = "https://github.com/yaugenst/mlatint"
+
+[tool.setuptools.packages.find]
+where = ["mlatint"]
+
+[tool.ruff]
+select = ["E", "W", "F", "B", "I", "UP", "C4", "NPY", "PT", "SIM", "ARG", "PERF", "PTH"]
+fixable = ["ALL"]
+ignore = ["F821"]
+unfixable = ["F401", "F841"]
+line-length = 88
+target-version = "py310"
