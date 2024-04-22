@@ -29,8 +29,8 @@ dependencies = [
 [project.urls]
 Source = "https://github.com/yaugenst/mlatint"
 
-[tool.setuptools.packages.find]
-where = ["mlatint"]
+[tool.setuptools]
+packages = ["mlatint"]
 
 [tool.ruff]
 select = ["E", "W", "F", "B", "I", "UP", "C4", "NPY", "PT", "SIM", "ARG", "PERF", "PTH"]
